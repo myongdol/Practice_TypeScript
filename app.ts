@@ -8,7 +8,8 @@ function add(n1:number, n2:number, showResult: boolean, phrase: string) {
     }
 }
 
-const number1 = 10;
+let number1: number;
+number1 = 10;
 const number2 = 2.5;
 const printResult = true;
 const resultPhrase = '정답은 : ';

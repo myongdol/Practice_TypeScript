@@ -7,7 +7,8 @@ function add(n1, n2, showResult, phrase) {
         return result;
     }
 }
-var number1 = 10;
+var number1;
+number1 = '10';
 var number2 = 2.5;
 var printResult = true;
 var resultPhrase = '정답은 : ';
