@@ -9,4 +9,5 @@
 열거형 학습메모 : https://blog.naver.com/ares132/223178485658   
 any타입 학습메모 : https://blog.naver.com/ares132/223178500353  
 조합 타입 학습메모 : https://blog.naver.com/ares132/223178688668  
+리터럴 타입 학습메모 : https://blog.naver.com/ares132/223178711558  
 </div>
