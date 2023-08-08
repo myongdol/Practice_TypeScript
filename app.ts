@@ -1,15 +1,16 @@
-function combine(input1:number | string, input2:number | string, resultType: string) {
+function combine(input1:number | string, input2:number | string, resultType: '감자'|'토마토') {
     let result;
-    if(typeof input1 === 'number' && typeof input2 === 'number') {
-        result = input1 + input2;
+    if(typeof input1 === 'number' && typeof input2 === 'number' || resultType === '감자' ) {
+        result = +input1 + +input2;
     } else {
         result = input1.toString() + input2.toString();
     }
-    if(resultType === '감자') {
-         return +result
-    } else {
-        return result.toString();
-    }
+    return result;
+    // if(resultType === '감자') {
+    //      return +result
+    // } else {
+    //     return result.toString();
+    // }
 }
 
 const combinedAges = combine(12, 34, '감자');
