@@ -5,5 +5,6 @@
 타입 할당 및 타입 추론하기 메모 : https://blog.naver.com/ares132/223175801923  
 객체 타입 메모 : https://blog.naver.com/ares132/223176542382  
 배열 타입 메모 : https://blog.naver.com/ares132/223177506949  
-튜플 메모 : https://blog.naver.com/ares132/223177628607   
+튜플 메모 : https://blog.naver.com/ares132/223177628607  
+열거형 메모 : https://blog.naver.com/ares132/223178485658   
 </div>
