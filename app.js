@@ -28,7 +28,7 @@ var person = {
 //  person.role.push('myongdol');
 //  person.role[1] = 12;
 var favoriteMovie;
-favoriteMovie = ['Intern'];
+favoriteMovie = ['Intern', 123, true];
 console.log(person.name);
 for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
     var hobby = _a[_i];
@@ -45,3 +45,8 @@ var Lightcolor;
 })(Lightcolor || (Lightcolor = {}));
 var TrafficLight = Lightcolor.Yellow;
 console.log(TrafficLight);
+var value = 5;
+value = "string";
+value = [1, 2, 3];
+value = { key: "value" };
+console.log(value);

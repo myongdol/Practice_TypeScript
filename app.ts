@@ -28,8 +28,8 @@ const person = {
 //  person.role.push('myongdol');
 //  person.role[1] = 12;
 
- let favoriteMovie: string[];
- favoriteMovie = ['Intern'];
+ let favoriteMovie: any[];
+ favoriteMovie = ['Intern', 123, true];
 
 console.log(person.name)
 
@@ -49,3 +49,9 @@ enum Lightcolor {
   
   let TrafficLight: Lightcolor = Lightcolor.Yellow;
   console.log(TrafficLight);
+
+  let value: any = 5;
+   value = "string";
+   value = [1, 2, 3];
+   value = { key: "value" };
+   console.log(value);
