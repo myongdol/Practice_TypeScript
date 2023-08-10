@@ -1,4 +1,7 @@
-function combine(input1:number | string, input2:number | string, resultType: '감자'|'토마토') {
+type CombineType = number | string;
+type ConversionDec = '감자' | '토마토';
+
+function combine(input1: CombineType, input2: CombineType, resultType: ConversionDec) {
     let result;
     if(typeof input1 === 'number' && typeof input2 === 'number' || resultType === '감자' ) {
         result = +input1 + +input2;
