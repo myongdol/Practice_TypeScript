@@ -12,3 +12,6 @@
 [any타입 학습메모](https://blog.naver.com/ares132/223178500353)  
 [조합 타입 학습메모](https://blog.naver.com/ares132/223178688668)  
 [리터럴 타입 학습메모](https://blog.naver.com/ares132/223178711558)  
+[타입 엘리어스 학습메모](https://blog.naver.com/ares132/223180438011)  
+
+
