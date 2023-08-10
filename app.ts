@@ -6,4 +6,9 @@ function printResult(num: number) {
     console.log('result: ' + num)
 }
 
-printResult(add(10, 20));
+let combineValues: Function;
+combineValues = add;
+combineValues = printResult;
+// combineValues = 999;
+
+console.log(combineValues(10, 10));
