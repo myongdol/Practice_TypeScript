@@ -6,6 +6,10 @@ function printResult(num) {
 }
 var combineValues;
 combineValues = add;
-combineValues = printResult;
+// combineValues = printResult;
 // combineValues = 999;
 console.log(combineValues(10, 10));
+var plus = function (a, b) { return a + b; };
+var minus = function (a, b) { return a - b; };
+console.log(plus(10, 10));
+console.log(minus(20, 10));
