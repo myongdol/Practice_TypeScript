@@ -17,3 +17,4 @@
 
 [반환타입과 void 학습메모](https://blog.naver.com/ares132/223180478919)  
 [타입의 기능을 하는 함수 학습메모](https://blog.naver.com/ares132/223180606048)
+[함수 타입, 콜백 학습메모](https://blog.naver.com/ares132/223181431757)  
