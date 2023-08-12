@@ -19,3 +19,6 @@
 [타입의 기능을 하는 함수 학습메모](https://blog.naver.com/ares132/223180606048)  
 [함수 타입, 콜백 학습메모](https://blog.naver.com/ares132/223181431757)  
 [unknown 타입 학습메모](https://blog.naver.com/ares132/223182059546)  
+[never 타입 학습메모](https://blog.naver.com/ares132/223182109117)  
+
+
