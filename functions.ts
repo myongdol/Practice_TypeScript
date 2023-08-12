@@ -31,6 +31,8 @@ addAndHandler(20, 30, (result) => {
 })
 
 
+
+/*
 // 콜백 함수 타입 정의
 interface MyCallback {
     (e: Event): void;
@@ -47,4 +49,4 @@ interface MyCallback {
       e.preventDefault();
     }
   });
-  
+  */
