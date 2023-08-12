@@ -1,11 +1,3 @@
-var userInput;
-var userName;
-userInput = 1234;
-userInput = 'Myongdol';
-if (typeof userInput === 'string') {
-    userName = userInput;
-}
-function generateError(message, code) {
-    throw { message: message, errorCode: code };
-}
-generateError('에러발생', 500);
+var userName = 'Myongdol2';
+userName = 123;
+console.log(userName);
