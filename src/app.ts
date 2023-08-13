@@ -1,4 +1,5 @@
-const userName = 'Myongdol2';
+const button = document.querySelector('button');
 
-
-console.log(userName);
+button?.addEventListener('click', () => {
+    console.log('클릭')
+})
