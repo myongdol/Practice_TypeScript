@@ -27,4 +27,7 @@
 [컴파일 대상 포함,제외 학습메모](https://blog.naver.com/ares132/223182626105)  
 [rootDit, outDir 옵션](https://blog.naver.com/ares132/223182696400)  
 [strict 옵션](https://blog.naver.com/ares132/223182763064)  
+[코드품질 관련 옵션](https://blog.naver.com/ares132/223182846336)  
+
+
 
