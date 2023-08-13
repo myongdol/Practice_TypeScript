@@ -1,19 +1,4 @@
 "use strict";
-//  const person: {
-//     name: string,
-//     age: number,
-//  } = {
-//    const person: {
-//       name:string;
-//       age: number;
-//       hobbies: string[];
-//       role: [number, string]
-//    }= {
-//     name: 'myongdol',
-//     age: 99,
-//     hobbies: ['movie', 'walk'],
-//     role: [2, 'author']
-//  }
 var Role;
 (function (Role) {
     Role[Role["ADMIN"] = 0] = "ADMIN";
@@ -26,8 +11,6 @@ const person = {
     hobbies: ['movie', 'walk'],
     role: Role.ADMIN
 };
-//  person.role.push('myongdol');
-//  person.role[1] = 12;
 let favoriteMovie;
 favoriteMovie = ['Intern', 123, true];
 console.log(person.name);

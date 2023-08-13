@@ -8,11 +8,6 @@ function combine(input1, input2, resultType) {
         result = input1.toString() + input2.toString();
     }
     return result;
-    // if(resultType === '감자') {
-    //      return +result
-    // } else {
-    //     return result.toString();
-    // }
 }
 const combinedAges = combine(12, 34, '감자');
 const combinedStringAges = combine('12', '34', '감자');

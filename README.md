@@ -25,3 +25,5 @@
 ## 컴파일러
 [watch mode 학습메모](https://blog.naver.com/ares132/223182141315)  
 [컴파일 대상 포함,제외 학습메모](https://blog.naver.com/ares132/223182626105)  
+[rootDit, outDir](https://blog.naver.com/ares132/223182696400)  
+
