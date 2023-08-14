@@ -1,25 +1,57 @@
-const button = document.querySelector('button');
+class Department {
+    name: string;
 
-button?.addEventListener('click', () => {
-    console.log('클릭')
-})
-
-function example() {
-    const usedMessage = "안녕 하세요";
-    const unusedMessage = "안녕히 가세요"; // 이 줄의 변수가 사용되지 않는 경우
-    console.log(usedMessage);
-   }
-
-function exampleFunc(params: string) {
-    console.log('매개변수를 사용하지 않았습니다.')
-}
-
-function add(a: number, b:number) {
-    if(a > 0){
-        return a + b;
+    constructor(n: string) {
+        this.name = n;
     }
 }
 
-const data = { name: "Myongdol", age: 99 };
-const key = "email";
-const value = data[key]; // data 객체에 "email" 속성이 없으면 value는 undefined이므로 경고 발생
+const accounting = new Department('Accounting');
+
+console.log(accounting)
+
+
+
+// 함수를 변수에 할당
+const add = (a: number, b: number) => a + b;
+
+// 함수를 다른 함수의 인자로 전달
+const applyOperation = (operation: (a: number, b: number) => number, a: number, b: number) => {
+    return operation(a, b);
+}
+
+const result = applyOperation(add, 5, 3); // add 함수를 전달하여 연산 수행
+console.log(result); // 출력: 8
+
+// 함수를 반환값으로 사용
+const getMultiplier = (factor: number) => {
+    return (num: number) => num * factor;
+}
+
+const multiplyBy2 = getMultiplier(2);
+const multiplyBy3 = getMultiplier(3);
+
+console.log(multiplyBy2(4)); // 출력: 8
+console.log(multiplyBy3(4)); // 출력: 12
+
+
+// 객체를 변수에 할당
+const person = {
+    name: "Myongdol",
+    age: 99,
+};
+
+// 객체를 다른 객체의 속성으로 사용
+const userDetails = {
+    user: person,
+    isAdmin: false,
+};
+
+console.log(userDetails.user.name); // 출력: Myongdol
+
+// 객체를 함수의 인자로 전달
+const displayUserInfo = (user: { name: string, age: number }) => {
+    console.log(`Name: ${user.name}, Age: ${user.age}`);
+}
+
+displayUserInfo(person); // 출력: Name: Myongdol, Age: 99
