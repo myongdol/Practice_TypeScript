@@ -32,3 +32,5 @@
 
 ## 클래스와 인터페이스
 [퍼스트클래스 함수, 객체](https://blog.naver.com/ares132/223183713280)  
+[생성자 함수, this키워드](https://blog.naver.com/ares132/223183758925)  
+
