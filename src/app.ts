@@ -3,7 +3,7 @@ class Department {
     // private name: string;  
     private employees:string[] = []; 
 
-    constructor(private id: string, public name: string) {  
+    constructor(private readonly id: string, public name: string) {  
         // this.name = n;
         // this.id = id;
     }
@@ -14,6 +14,7 @@ class Department {
 
     addEmployee(employee: string) { 
         this.employees.push(employee)
+        this.id = 'userID2'
     }
 
     printEmployeeInfomation() {
@@ -29,6 +30,18 @@ accounting.addEmployee('dolmyong');
 accounting.printEmployeeInfomation() 
 
 
+
+class Person {
+    readonly name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+
+const person = new Person("Myongdol");
+console.log(person.name); // 출력: "Myongdol"
+person.name = "나그네"; // 오류: Cannot assign to 'name' because it is a read-only property.
 
 // const accountingCopy = { name:'myongdol',describe: accounting.describe };
 // accountingCopy.describe(); // myongdol 출력됨

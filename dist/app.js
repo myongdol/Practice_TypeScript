@@ -10,6 +10,7 @@ class Department {
     }
     addEmployee(employee) {
         this.employees.push(employee);
+        this.id = 'userID2';
     }
     printEmployeeInfomation() {
         console.log(this.employees.length);
@@ -21,3 +22,11 @@ accounting.describe();
 accounting.addEmployee('myongdol');
 accounting.addEmployee('dolmyong');
 accounting.printEmployeeInfomation();
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+}
+const person = new Person("Myongdol");
+console.log(person.name);
+person.name = "나그네";
