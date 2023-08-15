@@ -37,3 +37,5 @@
 [읽기전용 속성](https://blog.naver.com/ares132/223183871143)  
 [클래스 상속](https://blog.naver.com/ares132/223184492664)  
 
+
+[protected 접근제어](https://blog.naver.com/ares132/223184562548)  

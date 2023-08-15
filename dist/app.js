@@ -27,6 +27,12 @@ class AccountingDepartment extends Department {
         super(id, 'IT');
         this.reports = reports;
     }
+    addEmployee(name) {
+        if (name === 'myongdol') {
+            return;
+        }
+        this.employees.push(name);
+    }
     addReport(text) {
         this.reports.push(text);
     }
@@ -43,3 +49,5 @@ console.log(IT);
 const accounting = new AccountingDepartment('user2', []);
 accounting.addReport('보고합니다');
 accounting.printReports();
+accounting.addEmployee('나그네');
+accounting.printEmployeeInfomation();
