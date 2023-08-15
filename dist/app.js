@@ -23,9 +23,22 @@ class ITDepartment extends Department {
     }
 }
 class AccountingDepartment extends Department {
+    get mostRecentReport() {
+        if (this.lastReport) {
+            return this.lastReport;
+        }
+        throw new Error('보고서 없음');
+    }
+    set mostRecentReport2(value) {
+        if (!value) {
+            throw new Error('유효한 값을 전달 해주세요');
+        }
+        this.addReport(value);
+    }
     constructor(id, reports) {
         super(id, 'IT');
         this.reports = reports;
+        this.lastReport = reports[0];
     }
     addEmployee(name) {
         if (name === 'myongdol') {
@@ -35,6 +48,7 @@ class AccountingDepartment extends Department {
     }
     addReport(text) {
         this.reports.push(text);
+        this.lastReport = text;
     }
     printReports() {
         console.log(this.reports);
@@ -47,7 +61,26 @@ IT.addEmployee('dolmyong');
 IT.printEmployeeInfomation();
 console.log(IT);
 const accounting = new AccountingDepartment('user2', []);
+accounting.mostRecentReport2 = 'abc';
 accounting.addReport('보고합니다');
 accounting.printReports();
 accounting.addEmployee('나그네');
 accounting.printEmployeeInfomation();
+console.log(accounting.mostRecentReport);
+class Temperature {
+    constructor() {
+        this._celsius = 0;
+    }
+    get celsius() {
+        return this._celsius;
+    }
+    set celsius(value) {
+        if (value < -273.15) {
+            throw new Error("에러발생.");
+        }
+        this._celsius = value;
+    }
+}
+const temp = new Temperature();
+temp.celsius = 25;
+console.log(temp.celsius);
