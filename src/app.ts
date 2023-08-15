@@ -1,4 +1,5 @@
 class Department {  
+    static fisicalYear = 2023;
     // private id: string;
     // private name: string;  
     protected  employees:string[] = []; 
@@ -6,6 +7,10 @@ class Department {
     constructor(private readonly id: string, public name: string) {  
         // this.name = n;
         // this.id = id;
+    }
+    
+    static createEmployee(name: string) {
+        return {name: name};
     }
 
     describe(this: Department) { 
@@ -67,7 +72,8 @@ class AccountingDepartment extends Department {
         console.log(this.reports)
     }
 }
-
+const employee1 = Department.createEmployee('김씨');
+console.log(employee1, Department.fisicalYear)
 const IT = new ITDepartment('userID', ['myongdol']);
 IT.describe();  
 IT.addEmployee('myongdol'); 
@@ -86,24 +92,46 @@ accounting.printEmployeeInfomation();
 
 console.log(accounting.mostRecentReport);
 
-class Temperature {
-    private _celsius: number = 0;
 
-    get celsius(): number {
-        return this._celsius;
-    }
-
-    set celsius(value: number) {
-        if (value < -273.15) {
-            throw new Error("에러발생.");
-        }
-        this._celsius = value;
-    }
+class MathUtils {
+  static add(x: number, y: number): number {
+    return x + y;
+  }
 }
 
-const temp = new Temperature();
-temp.celsius = 25; // 세터를 사용하여 값을 설정
-console.log(temp.celsius); // 게터를 사용하여 값을 조회
+const result = MathUtils.add(10, 20); // 30
+console.log(result)
+
+class Counter {
+  static count: number = 0;
+
+  static increment() {
+    Counter.count++;
+  }
+}
+
+Counter.increment();
+console.log(Counter.count); // 1
+
+
+// class Temperature {
+//     private _celsius: number = 0;
+
+//     get celsius(): number {
+//         return this._celsius;
+//     }
+
+//     set celsius(value: number) {
+//         if (value < -273.15) {
+//             throw new Error("에러발생.");
+//         }
+//         this._celsius = value;
+//     }
+// }
+
+// const temp = new Temperature();
+// temp.celsius = 25; // 세터를 사용하여 값을 설정
+// console.log(temp.celsius); // 게터를 사용하여 값을 조회
 // class Person {
 //     readonly name: string;
 

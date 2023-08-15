@@ -5,6 +5,9 @@ class Department {
         this.name = name;
         this.employees = [];
     }
+    static createEmployee(name) {
+        return { name: name };
+    }
     describe() {
         console.log(`'Department (${this.id}: ${this.name})`);
     }
@@ -16,6 +19,7 @@ class Department {
         console.log(this.employees);
     }
 }
+Department.fisicalYear = 2023;
 class ITDepartment extends Department {
     constructor(id, admins) {
         super(id, 'IT');
@@ -54,6 +58,8 @@ class AccountingDepartment extends Department {
         console.log(this.reports);
     }
 }
+const employee1 = Department.createEmployee('김씨');
+console.log(employee1, Department.fisicalYear);
 const IT = new ITDepartment('userID', ['myongdol']);
 IT.describe();
 IT.addEmployee('myongdol');
@@ -67,20 +73,18 @@ accounting.printReports();
 accounting.addEmployee('나그네');
 accounting.printEmployeeInfomation();
 console.log(accounting.mostRecentReport);
-class Temperature {
-    constructor() {
-        this._celsius = 0;
-    }
-    get celsius() {
-        return this._celsius;
-    }
-    set celsius(value) {
-        if (value < -273.15) {
-            throw new Error("에러발생.");
-        }
-        this._celsius = value;
+class MathUtils {
+    static add(x, y) {
+        return x + y;
     }
 }
-const temp = new Temperature();
-temp.celsius = 25;
-console.log(temp.celsius);
+const result = MathUtils.add(10, 20);
+console.log(result);
+class Counter {
+    static increment() {
+        Counter.count++;
+    }
+}
+Counter.count = 0;
+Counter.increment();
+console.log(Counter.count);

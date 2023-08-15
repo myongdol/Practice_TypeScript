@@ -40,3 +40,4 @@
 
 [protected 접근제어자](https://blog.naver.com/ares132/223184562548)  
 [게터와 세터](https://blog.naver.com/ares132/223184620497)  
+[정적 메서드와 정적 속성](https://blog.naver.com/ares132/223184655773)  
