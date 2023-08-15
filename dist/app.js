@@ -8,9 +8,6 @@ class Department {
     static createEmployee(name) {
         return { name: name };
     }
-    describe() {
-        console.log(`'Department (${this.id}: ${this.name})`);
-    }
     addEmployee(employee) {
         this.employees.push(employee);
     }
@@ -24,6 +21,9 @@ class ITDepartment extends Department {
     constructor(id, admins) {
         super(id, 'IT');
         this.admins = admins;
+    }
+    describe() {
+        console.log('IT부서 - ID: ' + this.id);
     }
 }
 class AccountingDepartment extends Department {
@@ -43,6 +43,9 @@ class AccountingDepartment extends Department {
         super(id, 'IT');
         this.reports = reports;
         this.lastReport = reports[0];
+    }
+    describe() {
+        console.log('회계부서 - ID: ' + this.id);
     }
     addEmployee(name) {
         if (name === 'myongdol') {
@@ -69,22 +72,34 @@ console.log(IT);
 const accounting = new AccountingDepartment('user2', []);
 accounting.mostRecentReport2 = 'abc';
 accounting.addReport('보고합니다');
-accounting.printReports();
 accounting.addEmployee('나그네');
-accounting.printEmployeeInfomation();
+accounting.describe();
 console.log(accounting.mostRecentReport);
-class MathUtils {
-    static add(x, y) {
-        return x + y;
+class Shape {
+    constructor(name) {
+        this.name = name;
     }
 }
-const result = MathUtils.add(10, 20);
-console.log(result);
-class Counter {
-    static increment() {
-        Counter.count++;
+class Circle extends Shape {
+    constructor(radius) {
+        super('Circle');
+        this.radius = radius;
+    }
+    calculateArea() {
+        return Math.PI * Math.pow(this.radius, 2);
     }
 }
-Counter.count = 0;
-Counter.increment();
-console.log(Counter.count);
+class Triangle extends Shape {
+    constructor(base, height) {
+        super('Triangle');
+        this.base = base;
+        this.height = height;
+    }
+    calculateArea() {
+        return 0.5 * this.base * this.height;
+    }
+}
+const circle = new Circle(5);
+console.log(`${circle.name}의 넓이: ${circle.calculateArea()}`);
+const triangle = new Triangle(4, 6);
+console.log(`${triangle.name}의 넓이: ${triangle.calculateArea()}`);

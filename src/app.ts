@@ -1,10 +1,10 @@
-class Department {  
+abstract class Department {  
     static fisicalYear = 2023;
     // private id: string;
     // private name: string;  
     protected  employees:string[] = []; 
 
-    constructor(private readonly id: string, public name: string) {  
+    constructor(protected readonly id: string, public name: string) {  
         // this.name = n;
         // this.id = id;
     }
@@ -13,9 +13,7 @@ class Department {
         return {name: name};
     }
 
-    describe(this: Department) { 
-        console.log(`'Department (${this.id}: ${this.name})`);
-    }
+    abstract describe(this: Department): void; 
 
     addEmployee(employee: string) { 
         this.employees.push(employee)
@@ -32,6 +30,10 @@ class ITDepartment extends Department {
  constructor(id: string, admins:string[]) {
     super(id, 'IT');
     this.admins = admins;
+ }
+
+ describe() {
+     console.log('IT부서 - ID: ' + this.id)
  }
 }
 
@@ -57,6 +59,11 @@ class AccountingDepartment extends Department {
         super(id, 'IT')
         this.lastReport = reports[0];
     }
+
+    describe() {
+        console.log('회계부서 - ID: ' + this.id)
+    }
+
     addEmployee(name: string) {
         if(name==='myongdol') {
             return;
@@ -86,32 +93,72 @@ const accounting = new AccountingDepartment('user2', []);
 // accounting.mostRecentReport2 = '';
 accounting.mostRecentReport2 = 'abc';
 accounting.addReport('보고합니다');
-accounting.printReports();
 accounting.addEmployee('나그네')
-accounting.printEmployeeInfomation();
+// accounting.printReports();
+// accounting.printEmployeeInfomation();
+accounting.describe();
 
 console.log(accounting.mostRecentReport);
 
 
-class MathUtils {
-  static add(x: number, y: number): number {
-    return x + y;
-  }
+
+
+// 추상 클래스 정의
+abstract class Shape {
+    constructor(public name: string) {}
+
+    abstract calculateArea(): number; // 추상 메서드
 }
 
-const result = MathUtils.add(10, 20); // 30
-console.log(result)
+// 원 클래스
+class Circle extends Shape {
+    constructor(public radius: number) {
+        super('Circle');
+    }
 
-class Counter {
-  static count: number = 0;
-
-  static increment() {
-    Counter.count++;
-  }
+    calculateArea(): number {
+        return Math.PI * this.radius ** 2;
+    }
 }
 
-Counter.increment();
-console.log(Counter.count); // 1
+// 삼각형 클래스
+class Triangle extends Shape {
+    constructor(public base: number, public height: number) {
+        super('Triangle');
+    }
+
+    calculateArea(): number {
+        return 0.5 * this.base * this.height;
+    }
+}
+
+// 추상 클래스와 하위 클래스 사용
+const circle = new Circle(5);
+console.log(`${circle.name}의 넓이: ${circle.calculateArea()}`);
+
+const triangle = new Triangle(4, 6);
+console.log(`${triangle.name}의 넓이: ${triangle.calculateArea()}`);
+
+
+// class MathUtils {
+//   static add(x: number, y: number): number {
+//     return x + y;
+//   }
+// }
+
+// const result = MathUtils.add(10, 20); // 30
+// console.log(result)
+
+// class Counter {
+//   static count: number = 0;
+
+//   static increment() {
+//     Counter.count++;
+//   }
+// }
+
+// Counter.increment();
+// console.log(Counter.count); // 1
 
 
 // class Temperature {
