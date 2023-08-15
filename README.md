@@ -35,4 +35,5 @@
 [생성자 함수, this키워드](https://blog.naver.com/ares132/223183758925)  
 [private, public 액세스 수정자](https://blog.naver.com/ares132/223183809238)  
 [읽기전용 속성](https://blog.naver.com/ares132/223183871143)  
+[클래스 상속](https://blog.naver.com/ares132/223184492664)  
 

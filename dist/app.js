@@ -10,23 +10,36 @@ class Department {
     }
     addEmployee(employee) {
         this.employees.push(employee);
-        this.id = 'userID2';
     }
     printEmployeeInfomation() {
         console.log(this.employees.length);
         console.log(this.employees);
     }
 }
-const accounting = new Department('userID', 'Accounting');
-accounting.describe();
-accounting.addEmployee('myongdol');
-accounting.addEmployee('dolmyong');
-accounting.printEmployeeInfomation();
-class Person {
-    constructor(name) {
-        this.name = name;
+class ITDepartment extends Department {
+    constructor(id, admins) {
+        super(id, 'IT');
+        this.admins = admins;
     }
 }
-const person = new Person("Myongdol");
-console.log(person.name);
-person.name = "나그네";
+class AccountingDepartment extends Department {
+    constructor(id, reports) {
+        super(id, 'IT');
+        this.reports = reports;
+    }
+    addReport(text) {
+        this.reports.push(text);
+    }
+    printReports() {
+        console.log(this.reports);
+    }
+}
+const IT = new ITDepartment('userID', ['myongdol']);
+IT.describe();
+IT.addEmployee('myongdol');
+IT.addEmployee('dolmyong');
+IT.printEmployeeInfomation();
+console.log(IT);
+const accounting = new AccountingDepartment('user2', []);
+accounting.addReport('보고합니다');
+accounting.printReports();
