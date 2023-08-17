@@ -46,4 +46,5 @@
 
 
 ## 인터페이스
-[인터페이스](https://blog.naver.com/ares132/223186536782)  
+[인터페이스 기초](https://blog.naver.com/ares132/223186536782)  
+[인터페이스와 클래스 ( implements )](https://blog.naver.com/ares132/223186610710)  
