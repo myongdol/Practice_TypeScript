@@ -40,9 +40,16 @@ class AccountingDepartment extends Department {
         this.addReport(value);
     }
     constructor(id, reports) {
-        super(id, 'IT');
+        super(id, '회계부서');
         this.reports = reports;
         this.lastReport = reports[0];
+    }
+    static getInstance() {
+        if (AccountingDepartment.instance) {
+            return this.instance;
+        }
+        this.instance = new AccountingDepartment('user2', []);
+        return this.instance;
     }
     describe() {
         console.log('회계부서 - ID: ' + this.id);
@@ -69,37 +76,32 @@ IT.addEmployee('myongdol');
 IT.addEmployee('dolmyong');
 IT.printEmployeeInfomation();
 console.log(IT);
-const accounting = new AccountingDepartment('user2', []);
+const accounting = AccountingDepartment.getInstance();
+const accounting2 = AccountingDepartment.getInstance();
+console.log(accounting, accounting2);
 accounting.mostRecentReport2 = 'abc';
 accounting.addReport('보고합니다');
 accounting.addEmployee('나그네');
 accounting.describe();
 console.log(accounting.mostRecentReport);
-class Shape {
-    constructor(name) {
-        this.name = name;
+class PlayerInfo {
+    constructor() {
+        this.playerName = "Guest";
+    }
+    static getInstance() {
+        if (!PlayerInfo.instance) {
+            PlayerInfo.instance = new PlayerInfo();
+        }
+        return PlayerInfo.instance;
+    }
+    setPlayerName(name) {
+        this.playerName = name;
+    }
+    getPlayerName() {
+        return this.playerName;
     }
 }
-class Circle extends Shape {
-    constructor(radius) {
-        super('Circle');
-        this.radius = radius;
-    }
-    calculateArea() {
-        return Math.PI * Math.pow(this.radius, 2);
-    }
-}
-class Triangle extends Shape {
-    constructor(base, height) {
-        super('Triangle');
-        this.base = base;
-        this.height = height;
-    }
-    calculateArea() {
-        return 0.5 * this.base * this.height;
-    }
-}
-const circle = new Circle(5);
-console.log(`${circle.name}의 넓이: ${circle.calculateArea()}`);
-const triangle = new Triangle(4, 6);
-console.log(`${triangle.name}의 넓이: ${triangle.calculateArea()}`);
+const player1 = PlayerInfo.getInstance();
+const player2 = PlayerInfo.getInstance();
+player1.setPlayerName("Myongdol");
+console.log(player2.getPlayerName());
