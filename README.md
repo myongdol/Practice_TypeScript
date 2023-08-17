@@ -30,7 +30,7 @@
 [코드품질 관련 옵션](https://blog.naver.com/ares132/223182846336)  
 
 
-## 클래스와 인터페이스
+## 클래스
 [퍼스트클래스 함수, 객체](https://blog.naver.com/ares132/223183713280)  
 [생성자 함수, this키워드](https://blog.naver.com/ares132/223183758925)  
 [private, public 액세스 수정자](https://blog.naver.com/ares132/223183809238)  
@@ -43,3 +43,7 @@
 [정적 메서드와 정적 속성](https://blog.naver.com/ares132/223184655773)  
 [추상 클래스](https://blog.naver.com/ares132/223184666799)  
 [싱글턴 패턴](https://blog.naver.com/ares132/223186437499)  
+
+
+## 인터페이스
+
