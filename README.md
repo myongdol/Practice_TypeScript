@@ -50,3 +50,4 @@
 [인터페이스와 클래스 ( implements )](https://blog.naver.com/ares132/223186610710)  
 [인터페이스 읽기전용 속성](https://blog.naver.com/ares132/223187377794)  
 [인터페이스 확장](https://blog.naver.com/ares132/223187395826)  
+[인터페이스 함수타입 정의](https://blog.naver.com/ares132/223187418644)  
