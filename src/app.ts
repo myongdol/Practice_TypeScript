@@ -1,6 +1,8 @@
-interface Greetable {
+interface Named {
     readonly name: string,
+}
 
+interface Greetable extends Named {
     greet(phrase: string): void;
 }
 
@@ -28,28 +30,28 @@ console.log(user)
 
 
 
-interface Shape {
-    getArea(): number;
-}
+// interface Shape {
+//     getArea(): number;
+// }
 
-class Circle implements Shape {
-    constructor(private radius: number) {}
+// class Circle implements Shape {
+//     constructor(private radius: number) {}
 
-    getArea() {
-        return Math.PI * this.radius * this.radius;
-    }
-}
+//     getArea() {
+//         return Math.PI * this.radius * this.radius;
+//     }
+// }
 
-class Rectangle implements Shape {
-    constructor(private width: number, private height: number) {}
+// class Rectangle implements Shape {
+//     constructor(private width: number, private height: number) {}
 
-    getArea() {
-        return this.width * this.height;
-    }
-}
+//     getArea() {
+//         return this.width * this.height;
+//     }
+// }
 
-const circle = new Circle(5);
-const rectangle = new Rectangle(4, 6);
+// const circle = new Circle(5);
+// const rectangle = new Rectangle(4, 6);
 
-console.log(circle.getArea()); // 원의 넓이 출력
-console.log(rectangle.getArea()); // 직사각형의 넓이 출력
+// console.log(circle.getArea()); // 원의 넓이 출력
+// console.log(rectangle.getArea()); // 직사각형의 넓이 출력
