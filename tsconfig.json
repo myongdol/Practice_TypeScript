@@ -110,5 +110,6 @@
     "node_modules", // 기본적으로 제외 되기 때문에 따로 설정하지 않아도 괜찬음 
     "learnType",
     "learnTsconfig",
+    "class&interface",
   ]
 }

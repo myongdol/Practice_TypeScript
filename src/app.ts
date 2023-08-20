@@ -1,77 +1,22 @@
-// type AddFn  = (a: number, b: number) => number;
-
-// let add: AddFn;
-
-// add = (n1: number, n2: number) => {
-//     return n1 + n2;
-// }
-interface AddFn {
-    (a: number, b:number): number
-}
-
-let add: AddFn;
-
-
-add = (n1: number, n2: number) => {
-    return n1 + n2;
-}
-
-
-
-interface Named {
-    readonly name: string,
-}
-
-interface Greetable extends Named {
-    greet(phrase: string): void;
-}
-
-class Person implements Greetable {
+type Admin = {
     name: string;
-    age = 99;
+    privileges: string[];
+};
 
-    constructor(n: string) {
-        this.name = n;
-    }
+type Employee = {
+    name: string;
+    startDate: Date;
+};
 
-    greet(phrase: string) {
-        console.log(phrase + ' ' + this.name);
-    }
+type ElevatedEmployee = Admin & Employee;
+
+const e1: ElevatedEmployee = {
+    name: 'myongdol',
+    privileges: ['create-server'],
+    startDate: new Date()
 }
 
+type Combinable = string | number;
+type Numberic = number | boolean;
 
-let user: Greetable;
-
-user = new Person('Myongdol');
-console.log(user)
-
-
-
-
-
-
-// interface Shape {
-//     getArea(): number;
-// }
-
-// class Circle implements Shape {
-//     constructor(private radius: number) {}
-
-//     getArea() {
-//         return Math.PI * this.radius * this.radius;
-//     }
-// }
-
-// class Rectangle implements Shape {
-//     constructor(private width: number, private height: number) {}
-
-//     getArea() {
-//         return this.width * this.height;
-//     }
-// }
-
-// const circle = new Circle(5);
-// const rectangle = new Rectangle(4, 6);
-
-// console.log(circle.getArea()); // 원의 넓이 출력
-// console.log(rectangle.getArea()); // 직사각형의 넓이 출력
+type Universal = Combinable & Numberic;

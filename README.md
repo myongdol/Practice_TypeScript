@@ -51,3 +51,8 @@
 [인터페이스 읽기전용 속성](https://blog.naver.com/ares132/223187377794)  
 [인터페이스 확장](https://blog.naver.com/ares132/223187395826)  
 [인터페이스 함수타입 정의](https://blog.naver.com/ares132/223187418644)  
+[인터페이스 선택적 매개변수, 속성](https://blog.naver.com/ares132/223187439697)  
+
+
+## 고급 타입
+[인터섹션 타입](https://blog.naver.com/ares132/223188752188)  
