@@ -56,3 +56,4 @@
 
 ## 고급 타입
 [인터섹션 타입](https://blog.naver.com/ares132/223188752188)  
+[타입 가드](https://blog.naver.com/ares132/223188798558)  
