@@ -57,3 +57,9 @@ function moveAnimal(animal) {
     console.log('이동속도는 : ' + speed);
 }
 moveAnimal({ type: 'bird', flyingSpeed: 30 });
+const paragraph = document.getElementById('message-output');
+const userInputElement = document.getElementById('user-input');
+userInputElement.value = '안녕하세요';
+if (userInputElement) {
+    userInputElement.value = '반갑습니다.';
+}

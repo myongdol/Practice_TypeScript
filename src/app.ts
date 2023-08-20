@@ -103,3 +103,15 @@ function moveAnimal(animal: Animal) {
 }
 
 moveAnimal({type: 'bird', flyingSpeed: 30});
+
+
+const paragraph = document.getElementById('message-output');
+
+// const userInputElement = document.getElementById('user-input')!;
+// const userInputElement = <HTMLInputElement>document.getElementById('user-input')!;
+const userInputElement = document.getElementById('user-input')! as HTMLInputElement;
+userInputElement.value = '안녕하세요';
+
+if(userInputElement) {
+    (userInputElement as HTMLInputElement).value = '반갑습니다.';
+}
