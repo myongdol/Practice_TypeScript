@@ -115,3 +115,13 @@ userInputElement.value = '안녕하세요';
 if(userInputElement) {
     (userInputElement as HTMLInputElement).value = '반갑습니다.';
 }
+
+
+interface ErrorContainer {
+    [prop: string]: string;
+}
+
+const errorBag: ErrorContainer = {
+    email: '유효하지 않은 이메일 입니다.',
+    username: '첫 글자는 대문자여야 합니다.'
+};

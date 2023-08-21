@@ -59,3 +59,4 @@
 [타입 가드](https://blog.naver.com/ares132/223188798558)  
 [구별된 유니언](https://blog.naver.com/ares132/223188862527)  
 [타입 캐스팅](https://blog.naver.com/ares132/223188920861)  
+[인덱스 시그니처](https://blog.naver.com/ares132/223189889721)  
