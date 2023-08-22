@@ -45,6 +45,15 @@ const fetchedUserData = {
 
 console.log(fetchedUserData?.job?.title);
 
+
+
+
+
+
+
+
+
+
 // type UnknownEmployee = Employee | Admin;
 
 // function printEmplyeeInfo (emp: UnknownEmployee) {
