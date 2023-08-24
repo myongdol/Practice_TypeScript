@@ -1,10 +1,7 @@
 "use strict";
-const names = [];
-const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(1234);
-    }, 3000);
-});
-promise.then(data => {
-    data.split(' ');
-});
+function merge(objA, objB) {
+    return Object.assign(objA, objB);
+}
+const mergedObj = merge({ name: '김씨' }, { age: 999 });
+console.log(mergedObj.name);
+console.log(mergedObj.age);
