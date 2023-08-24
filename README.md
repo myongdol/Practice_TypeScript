@@ -69,4 +69,6 @@
 
 ## 제네릭
 [제네릭 개요](https://blog.naver.com/ares132/223192662926)  
-[제네릭 함수 & 제약조건](https://blog.naver.com/ares132/223192752057)
+[제네릭 함수 & 제약조건](https://blog.naver.com/ares132/223192752057)  
+[keyof 연산자](https://blog.naver.com/ares132/223192784557)  
+

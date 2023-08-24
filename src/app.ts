@@ -27,3 +27,28 @@ function merge<T extends object, U extends object>(objA: T, objB: U): T & U {
 const mergedObj = merge({name: '김씨'}, {age: 999});
 console.log(mergedObj.name); // '김씨'
 console.log(mergedObj.age);  // 999
+console.log(mergedObj);
+
+interface Lengthy {
+    length: number
+}
+
+function countAndDescribe<T extends Lengthy>(element: T): [T, string] {
+    let descriptionText = '값이 없습니다.';
+    if(element.length === 1) {
+        descriptionText = '값을 하나 얻었습니다.' 
+    } else if (element.length > 1) {
+        descriptionText = '값이 ' + element.length + '개 입니다.'
+    }
+    return [element, descriptionText];
+}
+
+console.log(countAndDescribe('안녕하세요?'))
+
+
+function 추출및변환<T extends object, U extends keyof T>(obj: T, key: U) {
+    return '값은: ' + obj[key];
+}
+
+추출및변환({name: '김씨'}, 'name')
+
