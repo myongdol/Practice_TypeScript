@@ -72,3 +72,4 @@
 [제네릭 함수 & 제약조건](https://blog.naver.com/ares132/223192752057)  
 [keyof 연산자](https://blog.naver.com/ares132/223192784557)  
 [제네릭 클래스](https://blog.naver.com/ares132/223193621226)  
+[유틸리티 타입](https://blog.naver.com/ares132/223193689451)  

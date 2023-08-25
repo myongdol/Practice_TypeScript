@@ -83,3 +83,19 @@ console.log(글자보관함.획득하기());
 // 객체보관함.추가하기({name: '최씨'});
 // 객체보관함.제거하기({name: '이씨'});
 // console.log(객체보관함.획득하기());
+
+
+interface 목표 {
+    제목: string;
+    내용: string;
+    날짜: Date;
+};
+
+function 목표생성(제목: string, 내용: string, 날짜: Date): 목표 {
+    let 작은목표: Partial<목표> = {};
+    작은목표.제목 = 제목;
+    작은목표.내용 = 내용;
+    작은목표.날짜 = 날짜;
+    return 작은목표 as 목표;
+}
+const 출석부: Readonly<string[]> = ['김씨', '이씨'];
