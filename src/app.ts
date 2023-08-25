@@ -52,3 +52,34 @@ function 추출및변환<T extends object, U extends keyof T>(obj: T, key: U) {
 
 추출및변환({name: '김씨'}, 'name')
 
+
+class 데이터보관함<T extends string | number | boolean> {
+    private data: T[] = [];
+
+    추가하기(item: T) {
+        this.data.push(item);
+    };
+
+    제거하기(item: T) {
+        if(this.data.indexOf(item) === 1) {
+            return;
+        }
+        this.data.splice(this.data.indexOf(item), 1);
+    };
+
+    획득하기() {
+        return [...this.data];
+    }
+}
+
+const 글자보관함 = new 데이터보관함<string>();
+글자보관함.추가하기('김씨');
+글자보관함.추가하기('헬로');
+글자보관함.제거하기('헬로')
+console.log(글자보관함.획득하기());
+
+// const 객체보관함 = new 데이터보관함<object>();
+// 객체보관함.추가하기({name: '이씨'});
+// 객체보관함.추가하기({name: '최씨'});
+// 객체보관함.제거하기({name: '이씨'});
+// console.log(객체보관함.획득하기());
