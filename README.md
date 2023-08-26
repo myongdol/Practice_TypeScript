@@ -73,3 +73,8 @@
 [keyof 연산자](https://blog.naver.com/ares132/223192784557)  
 [제네릭 클래스](https://blog.naver.com/ares132/223193621226)  
 [유틸리티 타입](https://blog.naver.com/ares132/223193689451)  
+
+
+## 데코레이터
+[데코레이터](https://blog.naver.com/ares132/223194277160)  
+[데코레이터 팩토리](https://blog.naver.com/ares132/223194289974)  

@@ -1,56 +1,25 @@
 "use strict";
-function merge(objA, objB) {
-    return Object.assign(objA, objB);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+function 사용자(로그인알림) {
+    return function (constructor) {
+        console.log(로그인알림);
+        console.log(constructor);
+    };
 }
-const mergedObj = merge({ name: '김씨' }, { age: 999 });
-console.log(mergedObj.name);
-console.log(mergedObj.age);
-console.log(mergedObj);
-function countAndDescribe(element) {
-    let descriptionText = '값이 없습니다.';
-    if (element.length === 1) {
-        descriptionText = '값을 하나 얻었습니다.';
-    }
-    else if (element.length > 1) {
-        descriptionText = '값이 ' + element.length + '개 입니다.';
-    }
-    return [element, descriptionText];
-}
-console.log(countAndDescribe('안녕하세요?'));
-function 추출및변환(obj, key) {
-    return '값은: ' + obj[key];
-}
-추출및변환({ name: '김씨' }, 'name');
-class 데이터보관함 {
-    constructor() {
-        this.data = [];
-    }
-    추가하기(item) {
-        this.data.push(item);
-    }
-    ;
-    제거하기(item) {
-        if (this.data.indexOf(item) === 1) {
-            return;
-        }
-        this.data.splice(this.data.indexOf(item), 1);
-    }
-    ;
-    획득하기() {
-        return [...this.data];
-    }
-}
-const 글자보관함 = new 데이터보관함();
-글자보관함.추가하기('김씨');
-글자보관함.추가하기('헬로');
-글자보관함.제거하기('헬로');
-console.log(글자보관함.획득하기());
 ;
-function 목표생성(제목, 내용, 날짜) {
-    let 작은목표 = {};
-    작은목표.제목 = 제목;
-    작은목표.내용 = 내용;
-    작은목표.날짜 = 날짜;
-    return 작은목표;
-}
-const 출석부 = ['김씨', '이씨'];
+let 사람 = class 사람 {
+    constructor() {
+        this.name = '김씨';
+        console.log('사람 object 만드는중..');
+    }
+};
+사람 = __decorate([
+    사용자('로그인')
+], 사람);
+const 두번째사람 = new 사람();
+console.log(두번째사람);
